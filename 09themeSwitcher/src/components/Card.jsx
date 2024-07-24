@@ -9,7 +9,7 @@ export default function Card() {
             <div className="px-5 pb-5">
                 <a href="/">
                     <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                        Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport
+                        Samsung Watch 7 Series 
                     </h5>
                 </a>
                 <div className="flex items-center mt-2.5 mb-5">
