@@ -1,5 +1,5 @@
 import './App.css';
-import {useState} from "react"
+import {useEffect, useState} from "react"
 
 function App() {
   const [priority, setPriority] = useState("top");
@@ -54,6 +54,16 @@ function App() {
       setCompletedTasks([...completedTasks,completedTask])
     }
   }
+  useEffect(() => {
+    const priorityMap = {
+      top: 1,
+      middle: 2,
+      low: 3,
+    };
+
+    const sortedTasks = tasks.sort((a, b) => priorityMap[a.priority] - priorityMap[b.priority]);
+    setTasks([...sortedTasks]); // Update state with sorted tasks
+  }, [markDone,addTask]);
   const upcomingTasks=tasks.filter((t)=> !t.done);
   return (
     <div className="App">
